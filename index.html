@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kunal Web Agency</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:Poppins;background:#020617;color:white}
+.hero{padding:100px;text-align:center;background:linear-gradient(120deg,#000,#1e293b)}
+.btn{padding:14px 30px;background:#22c55e;color:black;border-radius:30px;
+text-decoration:none;font-weight:bold;margin:10px;display:inline-block}
+.section{padding:60px;text-align:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,250px);
+gap:20px;justify-content:center}
+.card{background:#0f172a;padding:25px;border-radius:20px;
+cursor:pointer;transition:0.3s}
+.card:hover{transform:scale(1.05);box-shadow:0 0 15px #22c55e}
+.demo{display:none;padding:60px;text-align:center;background:#000}
+.whatsapp{position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;padding:15px 22px;
+border-radius:50px;text-decoration:none;font-weight:bold}
+</style>
+</head>
+<body>
+
+<div class="hero">
+<h1>Kunal Web Agency</h1>
+<p>One place for all business websites</p>
+<a class="btn" href="#demos">View Demos</a>
+<a class="btn" href="https://wa.me919559401761">WhatsApp</a>
+</div>
+
+<div id="demos" class="section">
+<h2>Select Your Website Style</h2>
+<div class="cards">
+<div class="card" onclick="showDemo(1)">Gym / Fitness</div>
+<div class="card" onclick="showDemo(2)">Coaching / Institute</div>
+<div class="card" onclick="showDemo(3)">Shop / Cafe</div>
+<div class="card" onclick="showDemo(4)">Real Estate</div>
+</div>
+</div>
+
+<div id="demo1" class="demo">
+<h1>Gym Website</h1>
+<p>Dark premium design with WhatsApp leads</p>
+<a class="btn" href="https://wa.me/919559401761">Get This</a>
+</div>
+
+<div id="demo2" class="demo">
+<h1>Coaching Website</h1>
+<p>Clean modern education site</p>
+<a class="btn" href="https://wa.me/919559401761">Get This</a>
+</div>
+
+<div id="demo3" class="demo">
+<h1>Shop / Cafe Website</h1>
+<p>Colorful brand style for customers</p>
+<a class="btn" href="https://wa.me/919559401761">Get This</a>
+</div>
+
+<div id="demo4" class="demo">
+<h1>Real Estate Website</h1>
+<p>Luxury look for premium clients</p>
+<a class="btn" href="https://wa.me/919559401761">Get This</a>
+</div>
+
+<a class="whatsapp" href="https://wa.me/919559401761">Chat</a>
+
+<script>
+function showDemo(n){
+ document.querySelectorAll('.demo').forEach(d=>d.style.display="none");
+ document.getElementById("demo"+n).style.display="block";
+ window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
+}
+</script>
+
+</body>
+  </html>
