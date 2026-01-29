@@ -2,90 +2,107 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Kunal Demo Showcase</title>
+<title>Kunal Pro Demo Hub</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
   margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background:#050510;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg,#0f2027,#203a43,#2c5364);
   color:white;
+  text-align:center;
 }
 
 header {
-  padding:40px 20px;
-  text-align:center;
+  padding:50px 20px;
 }
 
-header h1 {
-  font-size:2.8em;
-  background: linear-gradient(90deg,#00f5ff,#00ff9d);
-  -webkit-background-clip:text;
-  color:transparent;
+h1 {
+  font-size:2.5em;
 }
 
-header p {
-  opacity:0.8;
+.tagline {
+  margin-top:10px;
+  font-size:18px;
+  opacity:0.9;
 }
 
-/* Horizontal scroll */
-.wrapper {
-  display:flex;
-  overflow-x:auto;
+.future {
+  margin-top:15px;
+  padding:12px 20px;
+  display:inline-block;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border-radius:30px;
+  font-size:16px;
+  box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+.container {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
   gap:25px;
-  padding:30px;
+  padding:40px;
 }
 
-.demo {
-  min-width:280px;
-  background:linear-gradient(160deg,#111,#1a1a2e);
-  border-radius:20px;
+.card {
+  background:rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
   padding:25px;
-  box-shadow:0 0 25px rgba(0,255,255,0.2);
+  border-radius:18px;
+  box-shadow:0 0 25px rgba(0,0,0,0.5);
   transition:0.3s;
 }
 
-.demo:hover {
-  transform:scale(1.05);
-  box-shadow:0 0 40px rgba(0,255,255,0.6);
+.card:hover {
+  transform:translateY(-10px) scale(1.03);
 }
 
-.demo h2 {
-  color:#00ffcc;
+.card h2 {
+  margin-bottom:10px;
 }
 
-.demo p {
+.preview {
   font-size:14px;
-  opacity:0.85;
+  opacity:0.8;
+  margin-bottom:10px;
 }
 
-.demo a {
+.btn {
   display:inline-block;
   margin-top:15px;
-  padding:10px 20px;
-  border-radius:25px;
+  padding:10px 22px;
   background:#00ffcc;
   color:black;
   text-decoration:none;
+  border-radius:30px;
   font-weight:bold;
 }
 
-/* Bottom bar */
-.bottom {
+.note {
+  margin-top:40px;
+  font-size:16px;
+  opacity:0.85;
+}
+
+.whatsapp {
   position:fixed;
-  bottom:0;
-  width:100%;
-  background:#000;
-  padding:15px;
-  text-align:center;
-  border-top:1px solid #00ffcc;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:white;
+  padding:15px 25px;
+  border-radius:40px;
+  text-decoration:none;
+  font-size:18px;
+  box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
-.bottom a {
-  color:#00ffcc;
-  text-decoration:none;
-  font-weight:bold;
+footer {
+  padding:20px;
+  font-size:14px;
+  opacity:0.7;
 }
 </style>
 </head>
@@ -93,43 +110,54 @@ header p {
 <body>
 
 <header>
-  <h1>Kunal Demo Showcase</h1>
-  <p>Swipe and explore premium website demos</p>
+  <h1>Your Business Website Demo</h1>
+  <p class="tagline">Ye sirf demo hai – kal yahan aapki dukaan hogi</p>
+  <div class="future">
+    ✨ Yahan aapka naam, photo aur WhatsApp lagega ✨
+  </div>
 </header>
 
-<div class="wrapper">
+<div class="container">
 
-  <div class="demo">
-    <h2>Gym Pro</h2>
-    <p>Modern fitness website</p>
-    <a href="https://kunalkunalbhai55.github.io/ONE-PAGE-PRO-DEMO-HUB-/" target="_blank">Open</a>
+  <div class="card">
+    <h2>Gym / Fitness</h2>
+    <p class="preview">Your Gym Name Here</p>
+    <a class="btn" href="https://kunalkunalbhai55.github.io/ONE-PAGE-PRO-DEMO-HUB-/" target="_blank">View Demo</a>
   </div>
 
-  <div class="demo">
-    <h2>Business Pro</h2>
-    <p>Agency & services</p>
-    <a href="https://kunalkunalbhai55.github.io/Pro-website-/" target="_blank">Open</a>
+  <div class="card">
+    <h2>Business / Agency</h2>
+    <p class="preview">Your Company Name Here</p>
+    <a class="btn" href="https://kunalkunalbhai55.github.io/Pro-website-/" target="_blank">View Demo</a>
   </div>
 
-  <div class="demo">
-    <h2>Shop Pro</h2>
-    <p>Local store website</p>
-    <a href="https://kunalkunalbhai55.github.io/Pro-ultra-website-/" target="_blank">Open</a>
+  <div class="card">
+    <h2>Shop / Store</h2>
+    <p class="preview">Your Shop Name Here</p>
+    <a class="btn" href="https://kunalkunalbhai55.github.io/Pro-ultra-website-/" target="_blank">View Demo</a>
   </div>
 
-  <div class="demo">
-    <h2>Portfolio Pro</h2>
-    <p>Personal brand</p>
-    <a href="https://kunalkunalbhai55.github.io/Pro-max-website-/" target="_blank">Open</a>
+  <div class="card">
+    <h2>Personal Brand</h2>
+    <p class="preview">Your Name Here</p>
+    <a class="btn" href="https://kunalkunalbhai55.github.io/Pro-max-website-/" target="_blank">View Demo</a>
   </div>
 
 </div>
 
-<div class="bottom">
-  <a href="https://wa.me/919559401761" target="_blank">
-    WhatsApp: Get your website now 🚀
-  </a>
-</div>
+<p class="note">
+Is demo me dusre ka business dikh raha hai,  
+par jab website banegi to **isi jagah aapka naam, photo aur number hoga.**  
+Customer direct WhatsApp se aapse contact karega.
+</p>
+
+<a class="whatsapp" href="https://wa.me/919559401761" target="_blank">
+Chat on WhatsApp
+</a>
+
+<footer>
+  © 2026 Kunal Design Studio | Your Business, Your Website
+</footer>
 
 </body>
 </html>
