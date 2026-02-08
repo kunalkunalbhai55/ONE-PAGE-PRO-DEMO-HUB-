@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>आपकी समस्या का 100% समाधान</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <!-- हैडर -->
+    <header>
+        <div class="logo">🚀 प्रॉब्लम सॉल्वर</div>
+        <nav>
+            <a href="#home">होम</a>
+            <a href="#services">सर्विसेज</a>
+            <a href="#location">हमारा एरिया</a>
+            <a href="#videos">वीडियो प्रूफ</a>
+            <a href="#contact">कॉन्टैक्ट</a>
+        </nav>
+        <a href="https://wa.me/91YOUR_NUMBER?text=मुझे सहायता चाहिए" class="whatsapp-btn" target="_blank">
+            📲 व्हाट्सएप्प पर बात करें
+        </a>
+    </header>
+
+    <!-- हीरो सेक्शन -->
+    <section class="hero">
+        <h1>घर बैठे समस्या का समाधान!</h1>
+        <p>मैप पर लोकेशन चुनें → व्हाट्सएप्प पर डिटेल्स भेजें → वीडियो कॉल से समाधान देखें!</p>
+        
+        <!-- स्टेप्स -->
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>लोकेशन चुनें</h3>
+                <p>मैप पर अपना एरिया सेलेक्ट करें</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>मैसेज करें</h3>
+                <p>व्हाट्सएप्प पर प्रॉब्लम डिटेल भेजें</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>समाधान पाएं</h3>
+                <p>लाइव वीडियो या फोटो से समाधान देखें</p>
+            </div>
+        </div>
+
+        <!-- एक्शन बटन -->
+        <div class="action-buttons">
+            <button onclick="openMap()">🗺️ मैप पर लोकेशन दिखाएं</button>
+            <button onclick="openWhatsApp()">💬 व्हाट्सएप्प पर मैसेज करें</button>
+            <button onclick="showVideos()">🎥 समाधान वीडियो देखें</button>
+        </div>
+    </section>
+
+    <!-- मैप सेक्शन -->
+    <section id="location" class="map-section">
+        <h2>हमारा सर्विस एरिया</h2>
+        <div id="map"></div>
+        <p>📍 नीले एरिया में हम सर्विस देते हैं!</p>
+    </section>
+
+    <!-- वीडियो सेक्शन -->
+    <section id="videos" class="video-section">
+        <h2>वीडियो प्रूफ - "हम कैसे ठीक करते हैं"</h2>
+        <div class="video-container">
+            <!-- वीडियो 1 -->
+            <div class="video-card">
+                <video controls>
+                    <source src="before_after1.mp4" type="video/mp4">
+                </video>
+                <p>मोबाइल रिपेयर - बिफोर/आफ्टर</p>
+            </div>
+            <!-- वीडियो 2 -->
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"></iframe>
+                <p>कस्टमर रिव्यू</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- व्हाट्सएप्प फिक्स्ड बटन -->
+    <a href="https://wa.me/91YOUR_NUMBER" class="float-whatsapp" target="_blank">
+        <img src="whatsapp-icon.png" alt="WhatsApp">
+    </a>
+
+    <script src="script.js"></script>
+</body>
+  </html>
