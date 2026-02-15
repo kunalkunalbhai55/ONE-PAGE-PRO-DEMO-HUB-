@@ -1,134 +1,54 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D सर्विस हब - समस्या का 3D समाधान</title>
-    <!-- Three.js for 3D -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <!-- Mapbox for 3D Maps -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet'/>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Gold Gym Pro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 3D Background -->
-    <div id="3d-container"></div>
-
-    <!-- Navigation -->
-    <nav class="glass-nav">
-        <div class="logo">
-            <i class="fas fa-cogs"></i>
-            <span>3D<span class="gradient-text">सर्विस</span>हब</span>
-        </div>
-        <div class="nav-links">
-            <a href="#home"><i class="fas fa-home"></i> होम</a>
-            <a href="#map"><i class="fas fa-map-marked-alt"></i> 3D मैप</a>
-            <a href="#services"><i class="fas fa-tools"></i> सर्विसेज</a>
-            <a href="#contact"><i class="fab fa-whatsapp"></i> कॉन्टैक्ट</a>
-        </div>
-        <button class="nav-btn" onclick="openWhatsApp()">
-            <i class="fab fa-whatsapp"></i> अर्जेंट हेल्प
-        </button>
+  <!-- Header -->
+  <header>
+    <h1>💪 Gold Gym Pro</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="plans.html">Plans</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="typing-text">आपकी समस्या, <span class="highlight">3D में समाधान!</span></h1>
-            <p class="subtitle">मैप पर लोकेशन चुनें → व्हाट्सएप्प पर डिटेल्स भेजें → लाइव 3D विज़ुअलाइजेशन देखें</p>
-            
-            <!-- Problem Selector -->
-            <div class="problem-selector">
-                <h3><i class="fas fa-search"></i> अपनी समस्या चुनें:</h3>
-                <div class="problem-buttons">
-                    <button class="problem-btn" data-problem="मोबाइल रिपेयर">📱 मोबाइल रिपेयर</button>
-                    <button class="problem-btn" data-problem="AC सर्विस">❄️ AC सर्विस</button>
-                    <button class="problem-btn" data-problem="प्लंबिंग">🔧 प्लंबिंग</button>
-                    <button class="problem-btn" data-problem="इलेक्ट्रिकल">⚡ इलेक्ट्रिकल</button>
-                    <button class="problem-btn" data-problem="अन्य">🔍 अन्य</button>
-                </div>
-            </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Transform Your Body, Transform Your Life</h2>
+    <p>Join today and start your fitness journey!</p>
+    <a href="https://wa.me/919559401761" class="btn">WhatsApp Us</a>
+  </section>
 
-            <!-- Location Input -->
-            <div class="location-input">
-                <h3><i class="fas fa-map-pin"></i> अपना लोकेशन डालें:</h3>
-                <div class="input-group">
-                    <input type="text" id="location" placeholder="जैसे: साकेत, दिल्ली">
-                    <button onclick="locateOnMap()"><i class="fas fa-search-location"></i> मैप पर ढूंढें</button>
-                </div>
-            </div>
-
-            <!-- Action Button -->
-            <button class="main-cta" onclick="startService()">
-                <i class="fas fa-play-circle"></i> 3D सर्विस शुरू करें
-            </button>
-        </div>
-
-        <!-- 3D Product Visualizer -->
-        <div class="product-visualizer">
-            <div id="product-3d"></div>
-            <div class="product-controls">
-                <button onclick="rotateModel('left')"><i class="fas fa-undo"></i> घुमाएं</button>
-                <button onclick="zoomModel('in')"><i class="fas fa-search-plus"></i> ज़ूम</button>
-                <button onclick="explodeModel()"><i class="fas fa-bomb"></i> पार्ट्स देखें</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3D Map Section -->
-    <section id="map" class="map-section">
-        <h2><i class="fas fa-globe-asia"></i> हमारा 3D सर्विस एरिया</h2>
-        <div class="map-container">
-            <div id="3d-map"></div>
-            <div class="map-overlay">
-                <h3>🎯 अपना एरिया सेलेक्ट करें</h3>
-                <p>मैप पर क्लिक करके बताएं कहाँ समस्या है</p>
-                <div class="area-tags">
-                    <span class="area-tag" data-area="साकेत">साकेत</span>
-                    <span class="area-tag" data-area="मयूर विहार">मयूर विहार</span>
-                    <span class="area-tag" data-area="नोएडा">नोएडा</span>
-                    <span class="area-tag" data-area="गाजियाबाद">गाजियाबाद</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services in 3D Cards -->
-    <section id="services" class="services-section">
-        <h2><i class="fas fa-cube"></i> 3D सर्विस कार्ड्स</h2>
-        <div class="cards-3d">
-            <!-- Card 1 -->
-            <div class="card-3d" onclick="showService('mobile')">
-                <div class="card-front">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>मोबाइल रिपेयर</h3>
-                    <p>3D में देखें कैसे ठीक करेंगे</p>
-                </div>
-                <div class="card-back">
-                    <h4>समय: 30 मिनट</h4>
-                    <p>💰 शुरुआत: ₹299</p>
-                    <button class="card-btn" onclick="orderService('मोबाइल रिपेयर')">ऑर्डर करें</button>
-                </div>
-            </div>
-            <!-- Add more cards similarly -->
-        </div>
-    </section>
-
-    <!-- WhatsApp Quick Action -->
-    <div class="whatsapp-fab">
-        <div class="whatsapp-tooltip">
-            <p>तुरंत मैसेज करें!</p>
-            <input type="text" id="quick-msg" placeholder="अपनी समस्या लिखें...">
-            <button onclick="sendQuickMsg()"><i class="fab fa-whatsapp"></i> भेजें</button>
-        </div>
-        <button class="whatsapp-btn" onclick="toggleWhatsApp()">
-            <i class="fab fa-whatsapp"></i>
-        </button>
+  <!-- Membership Plans -->
+  <section class="plans">
+    <h2>Membership Plans</h2>
+    <div class="plan">
+      <h3>Basic</h3>
+      <p>₹2000 / month</p>
     </div>
+    <div class="plan">
+      <h3>Pro</h3>
+      <p>₹2500 / month</p>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Members Say</h2>
+    <blockquote>"Best gym experience ever!"</blockquote>
+    <blockquote>"Amazing trainers and atmosphere."</blockquote>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>📍 Location: Your Village, India</p>
+    <p>📞 Contact: +91-9559401761</p>
+    <p>© 2026 Gold Gym Pro</p>
+  </footer>
 </body>
-    </html>
+</html>
